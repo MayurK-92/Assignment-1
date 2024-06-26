@@ -28,6 +28,23 @@ If you don't have an existing repository, create a new one:
 #### 1.2 Initialize and Push Sample Project
 
 If you have a sample project, initialize Git and push it to the repository:
+```python
+# In your Flask app file (e.g., app.py)
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/home")
+def read_root():
+    return {"Hello": "MCC Students!!!"}
+
+@app.get("/about")
+def about():
+    return {"msg": "About Us"}
+
+```
+
+
 
 ```bash
 git init
@@ -54,16 +71,27 @@ Add your new feature to the project. For example, add a new endpoint to a Flask 
 
 ```python
 # In your Flask app file (e.g., app.py)
-from flask import Flask
+from fastapi import FastAPI
 
-app = Flask(__name__)
+app = FastAPI()
 
-@app.route('/new-feature')
-def new_feature():
-    return "This is a new feature!"
+@app.get("/home")
+def read_root():
+    return {"Hello": "MCC Students!!!"}
 
-if __name__ == '__main__':
-    app.run(debug=True)
+@app.get("/about")
+def about():
+    return {"msg": "About Us"}
+
+@app.get("/courses")
+def get_courses():
+    courses = [
+        {"id": 1, "name": "DevOps", "instructor": "Dr.Jyotika Chheda"},
+        {"id": 2, "name": "Internet of Things", "instructor": "Dr.Hiren Dand"},
+        {"id": 3, "name": "Big Data and NOSQL ", "instructor": "Dr.Vishal Borude"},
+        {"id": 4, "name": "Artificial Intelligence", "instructor": "Dr.Priti Pathak"}
+    ]
+    return {"courses": courses}
 ```
 
 #### 2.3 Commit and Push the Changes
