@@ -28,6 +28,7 @@ If you don't have an existing repository, create a new one:
 #### 1.2 Initialize and Push Sample Project
 
 If you have a sample project, initialize Git and push it to the repository:
+## Sample code:
 ```python
 # In your Flask app file (e.g., app.py)
 from fastapi import FastAPI
@@ -43,8 +44,7 @@ def about():
     return {"msg": "About Us"}
 
 ```
-
-
+## Push commands
 
 ```bash
 git init
