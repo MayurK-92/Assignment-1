@@ -140,9 +140,7 @@ git push origin v1.0.0
 
 ## Conclusion
 
-You have successfully implemented a branching strategy in Git, including creating feature branches, release branches, and tagging a release. This workflow helps manage development and release cycles efficiently.
-
-For any issues or contributions, please open an issue or submit a pull request.
+You have successfully implemented a branching strategy in Git, including creating feature branches, release branches, and tagging a release. 
 
 ---
 
